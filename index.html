@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALLIARTE — Ourivesaria, Jóias &amp; Decoração | Mem Martins, Sintra</title>
+    <meta name="description"
+        content="Ourivesaria Valliarte Jóias e Decoração em Algueirão - Mem Martins, Sintra. Joalharia em ouro 19.2k e prata 925, filigrana portuguesa, alianças, relojoaria e restauro." />
+    <meta name="theme-color" content="#0B0C0E" />
+
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS Official CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons Official CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0B0C0E',
+                        slateDeep: '#121316',
+                        ebony: '#181A1E',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            muted: '#C5A880',
+                            dim: 'rgba(212, 175, 55, 0.12)'
+                        },
+                        pearl: '#F9F9F8',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'radial-luxury': 'radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(11, 12, 14, 0) 70%)',
+                        'grid-subtle': 'linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Base & Quiet Luxury Refinements */
+        body {
+            background-color: #0B0C0E;
+            color: #F9F9F8;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Subtle static grid size */
+        .bg-grid-pattern {
+            background-size: 48px 48px;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera on horizontal snap carousels */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Native Accordion Styling */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Selection color */
+        ::selection {
+            background-color: #D4AF37;
+            color: #0B0C0E;
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian text-pearl relative pb-20 md:pb-0">
+
+    <!-- Static Ambient Background Layer -->
+    <div class="fixed inset-0 pointer-events-none z-0 bg-radial-luxury"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 bg-grid-subtle bg-grid-pattern"></div>
+
+    <!-- 1. HEADER STICKY (GLASSMORPHISM) -->
+    <header
+        class="sticky top-0 z-40 w-full bg-[#0B0C0E]/85 backdrop-blur-md border-b border-neutral-800/80 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+            <!-- Brand Identity -->
+            <a href="#" class="group flex flex-col focus:outline-none">
+                <span
+                    class="font-serif text-2xl sm:text-3xl tracking-[0.22em] text-pearl font-semibold group-hover:text-gold transition-colors">
+                    VALLIARTE
+                </span>
+                <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-gold-muted font-light -mt-1">
+                    Ourivesaria · Jóias &amp; Decoração
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav aria-label="Navegação Principal"
+                class="hidden lg:flex items-center gap-8 text-sm font-normal text-neutral-300">
+                <a href="#colecao" class="hover:text-gold transition-colors py-1">Coleção &amp; Montra</a>
+                <a href="#servicos" class="hover:text-gold transition-colors py-1">Alianças &amp; Noivado</a>
+                <a href="#servicos" class="hover:text-gold transition-colors py-1">A Nossa Loja</a>
+                <a href="#simulador" class="hover:text-gold transition-colors py-1">Simulador</a>
+                <a href="#contactos" class="hover:text-gold transition-colors py-1">Contactos</a>
+            </nav>
+
+            <!-- Right Actions & Dynamic Status Badge -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <!-- Dynamic Status Badge -->
+                <div
+                    class="hidden xl:flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-ebony border border-neutral-800 text-xs text-neutral-300">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span class="tracking-wide text-[11px]">Algueirão - Mem Martins · Seg–Sex 10h–19h30</span>
+                </div>
+
+                <!-- Primary CTA -->
+                <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20ou%20agendar%20atendimento%20na%20loja."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-gold/10 hover:bg-gold text-gold hover:text-obsidian border border-gold/40 font-medium text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-sm">
+                    <span>Falar connosco</span>
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" aria-label="Abrir Menu" aria-expanded="false"
+                    class="lg:hidden p-2 rounded-lg text-neutral-300 hover:text-pearl hover:bg-ebony border border-neutral-800">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-slateDeep border-b border-neutral-800 px-4 pt-3 pb-6 space-y-3">
+            <div
+                class="flex items-center gap-2 py-2 px-3 rounded-lg bg-ebony border border-neutral-800/80 text-xs text-neutral-300 mb-2">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Algueirão - Mem Martins · Seg–Sex 10h–19h30 | Sáb 10h–13h</span>
+            </div>
+            <a href="#colecao"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">Coleção
+                &amp; Filigrana</a>
+            <a href="#servicos"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">Alianças
+                &amp; Noivado</a>
+            <a href="#servicos"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">A Nossa
+                Loja &amp; Oficina</a>
+            <a href="#simulador"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">Simulador
+                de Peças</a>
+            <a href="#faq"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">Perguntas
+                Frequentes</a>
+            <a href="#contactos"
+                class="mobile-link block px-3 py-2 rounded-lg text-base text-neutral-200 hover:bg-ebony hover:text-gold">Contactos
+                &amp; Horário</a>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+
+        <!-- 2. HERO SECTION (IMPACTO EDITORIAL) -->
+        <section class="relative pt-10 pb-16 md:py-24 lg:py-28 border-b border-neutral-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+                    <!-- Editorial Copy (7 cols) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ebony border border-amber-900/40 text-gold-muted text-xs font-mono uppercase tracking-widest">
+                            <span>Alta Joalharia &amp; Ofício Tradicional</span>
+                        </div>
+
+                        <h1
+                            class="font-serif text-4xl sm:text-6xl lg:text-[64px] text-pearl font-normal leading-[1.08] tracking-tight">
+                            A intemporalidade do ouro português <span class="italic text-gold font-normal">moldada à
+                                mão.</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-2xl">
+                            Mais do que joias, criamos peças de família. Do desenho de alianças de noivado sob medida ao
+                            restauro minucioso de ouro tradicional e filigrana, com a garantia do artesanato de bancada.
+                        </p>
+
+                        <!-- Dual CTAs -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                            <a href="#simulador"
+                                class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-gold hover:bg-[#e0bb3e] text-obsidian font-medium text-sm sm:text-base tracking-wide transition-all shadow-lg shadow-gold/10">
+                                <span>Simular Peça Sob Medida</span>
+                                <span class="font-mono text-base">↗</span>
+                            </a>
+                            <a href="#colecao"
+                                class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-ebony hover:bg-neutral-800 text-pearl border border-neutral-800 hover:border-gold-muted/40 font-normal text-sm sm:text-base transition-all">
+                                <span>Explorar Coleção &amp; Atelier</span>
+                                <span class="font-mono text-gold-muted">↓</span>
+                            </a>
+                        </div>
+
+                        <!-- Credibility Bar -->
+                        <div class="pt-4 border-t border-neutral-800/80">
+                            <p class="font-mono text-xs sm:text-[13px] text-gold-muted tracking-wide leading-relaxed">
+                                ✦ Ouro Português de Lei Certificado (19.2k) · Avaliação Oficial · 3 Gerações de Tradição
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Showcase Composition (5 cols) -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-xl overflow-hidden border border-amber-900/30 bg-ebony shadow-2xl">
+                            <img src="images/brincos-filigrana-coracao.jpg"
+                                alt="Brincos Coração de Viana em Filigrana na Ourivesaria Valliarte em Mem Martins"
+                                class="w-full h-[420px] sm:h-[500px] object-cover object-center brightness-95 contrast-105"
+                                loading="eager" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent">
+                            </div>
+
+                            <!-- Store Badge Top Right -->
+                            <div class="absolute top-4 right-4 flex items-center gap-2.5 p-2 pr-3.5 rounded-xl bg-[#121316]/90 backdrop-blur-md border border-neutral-800 shadow-lg">
+                                <img src="images/filigrana-modelo-valliarte.jpg" alt="Valliarte Jóias e Decoração" class="w-10 h-10 rounded-lg object-cover border border-gold/40" />
+                                <div class="text-left">
+                                    <span class="block text-[10px] font-mono uppercase tracking-wider text-gold">Mem Martins · Sintra</span>
+                                    <span class="block text-xs text-pearl font-medium">Valliarte Jóias &amp; Decoração</span>
+                                </div>
+                            </div>
+
+                            <!-- Technical Spec Floating Card -->
+                            <div
+                                class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#121316]/90 backdrop-blur-md border border-neutral-800 flex items-center justify-between">
+                                <div>
+                                    <span
+                                        class="block text-[11px] font-mono uppercase tracking-widest text-gold">Contrastaria
+                                        Portuguesa</span>
+                                    <p class="font-serif text-lg text-pearl">Ouro 19.2k · Prata de Lei 925‰ · Filigrana</p>
+                                </div>
+                                <div
+                                    class="text-right font-mono text-xs text-neutral-400 border-l border-neutral-800 pl-4">
+                                    <span class="block text-pearl font-medium">Desde 2010</span>
+                                    <span>Algueirão</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MÓDULO INTERATIVO DE NEGÓCIO: SIMULADOR DE ENCOMENDA & RESTAURO -->
+        <section id="simulador" class="py-20 lg:py-28 border-b border-neutral-800/80 scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-12">
+                    <span class="font-mono text-xs uppercase tracking-[0.2em] text-gold block mb-3">Configurador de
+                        Atelier</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-pearl font-normal tracking-tight mb-4">
+                        Simulador de Encomenda &amp; Restauro
+                    </h2>
+                    <p class="text-neutral-400 text-base sm:text-lg font-light">
+                        Desenhe o seu pedido em 3 passos simples. Receba uma estimativa imediata de prazo de execução na
+                        nossa bancada e solicite a cotação diretamente com o mestre ourives.
+                    </p>
+                </div>
+
+                <!-- Simulator Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                    <!-- Interactive Steps Column (8 cols) -->
+                    <div class="lg:col-span-8 space-y-8 bg-ebony p-6 sm:p-8 rounded-xl border border-neutral-800">
+
+                        <!-- STEP 1: Serviço -->
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <label class="font-serif text-xl sm:text-2xl text-pearl flex items-center gap-2.5">
+                                    <span
+                                        class="font-mono text-xs px-2.5 py-1 rounded bg-gold/10 text-gold border border-gold/30">PASSO
+                                        01</span>
+                                    <span>Selecione a Natureza do Serviço</span>
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="step1-options" role="radiogroup"
+                                aria-label="Serviço">
+
+                                <button type="button" data-service="Alianças de Noivado / Casamento"
+                                    data-days="10 a 15 dias úteis"
+                                    data-spec="Sessão de medidas + Gravação laser incluída"
+                                    class="sim-service-btn group text-left p-4 rounded-xl border border-gold bg-gold/10 transition-all flex items-start justify-between gap-3">
+                                    <div>
+                                        <span class="block font-medium text-pearl text-sm sm:text-base mb-1">Alianças de
+                                            Noivado / Casamento</span>
+                                        <span class="block text-xs text-neutral-400">Perfis anatómicos sob medida e
+                                            cravação de diamantes.</span>
+                                    </div>
+                                    <i data-lucide="gem" class="w-5 h-5 text-gold shrink-0 mt-0.5"></i>
+                                </button>
+
+                                <button type="button" data-service="Criação Sob Encomenda"
+                                    data-days="15 a 22 dias úteis" data-spec="Desenho 3D prévio + Fundição exclusiva"
+                                    class="sim-service-btn group text-left p-4 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all flex items-start justify-between gap-3">
+                                    <div>
+                                        <span class="block font-medium text-pearl text-sm sm:text-base mb-1">Criação Sob
+                                            Encomenda</span>
+                                        <span class="block text-xs text-neutral-400">Joia exclusiva desenhada de raiz
+                                            (ou com ouro do cliente).</span>
+                                    </div>
+                                    <i data-lucide="sparkles"
+                                        class="w-5 h-5 text-neutral-400 group-hover:text-gold shrink-0 mt-0.5"></i>
+                                </button>
+
+                                <button type="button" data-service="Restauro ou Ajuste de Medida"
+                                    data-days="3 a 6 dias úteis"
+                                    data-spec="Diagnóstico em bancada + Polimento ultrassónico"
+                                    class="sim-service-btn group text-left p-4 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all flex items-start justify-between gap-3">
+                                    <div>
+                                        <span class="block font-medium text-pearl text-sm sm:text-base mb-1">Restauro ou
+                                            Ajuste de Medida</span>
+                                        <span class="block text-xs text-neutral-400">Recuperação de joias antigas,
+                                            filigrana, soldaduras e banhos.</span>
+                                    </div>
+                                    <i data-lucide="hammer"
+                                        class="w-5 h-5 text-neutral-400 group-hover:text-gold shrink-0 mt-0.5"></i>
+                                </button>
+
+                                <button type="button" data-service="Gravação Personalizada"
+                                    data-days="24 a 48 horas úteis" data-spec=" Alta precisão Laser / Pantógrafo manual"
+                                    class="sim-service-btn group text-left p-4 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all flex items-start justify-between gap-3">
+                                    <div>
+                                        <span class="block font-medium text-pearl text-sm sm:text-base mb-1">Gravação
+                                            Personalizada</span>
+                                        <span class="block text-xs text-neutral-400">Datas, caligrafia própria, brasões
+                                            de família ou dedicatórias.</span>
+                                    </div>
+                                    <i data-lucide="pen-tool"
+                                        class="w-5 h-5 text-neutral-400 group-hover:text-gold shrink-0 mt-0.5"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="border-t border-neutral-800/80"></div>
+
+                        <!-- STEP 2: Metal / Material -->
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <label class="font-serif text-xl sm:text-2xl text-pearl flex items-center gap-2.5">
+                                    <span
+                                        class="font-mono text-xs px-2.5 py-1 rounded bg-gold/10 text-gold border border-gold/30">PASSO
+                                        02</span>
+                                    <span>Escolha o Metal Nobre ou Acabamento</span>
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="step2-options"
+                                role="radiogroup" aria-label="Material">
+
+                                <button type="button" data-metal="Ouro Amarelo 19.2k" data-hallmark="Contrastaria 800‰"
+                                    class="sim-metal-btn text-left p-3.5 rounded-xl border border-gold bg-gold/10 transition-all">
+                                    <span class="flex items-center gap-2 font-mono text-xs text-gold mb-1">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-[#D4AF37] inline-block"></span>
+                                        19.2 QUILATES
+                                    </span>
+                                    <span class="block font-medium text-pearl text-sm">Ouro Amarelo 19.2k</span>
+                                    <span class="block text-[11px] text-neutral-400 mt-0.5">Liga tradicional
+                                        portuguesa</span>
+                                </button>
+
+                                <button type="button" data-metal="Ouro Branco" data-hallmark="Banho de Ródio Nobre"
+                                    class="sim-metal-btn text-left p-3.5 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all">
+                                    <span class="flex items-center gap-2 font-mono text-xs text-neutral-300 mb-1">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-neutral-200 inline-block"></span>
+                                        19.2K / 18K
+                                    </span>
+                                    <span class="block font-medium text-pearl text-sm">Ouro Branco</span>
+                                    <span class="block text-[11px] text-neutral-400 mt-0.5">Brilho espelhado
+                                        contemporâneo</span>
+                                </button>
+
+                                <button type="button" data-metal="Prata 925" data-hallmark="Prata de Lei 925‰"
+                                    class="sim-metal-btn text-left p-3.5 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all">
+                                    <span class="flex items-center gap-2 font-mono text-xs text-neutral-400 mb-1">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-zinc-400 inline-block"></span>
+                                        LEI 925‰
+                                    </span>
+                                    <span class="block font-medium text-pearl text-sm">Prata 925</span>
+                                    <span class="block text-[11px] text-neutral-400 mt-0.5">Restauro, cinzelagem ou
+                                        autor</span>
+                                </button>
+
+                                <button type="button" data-metal="Com Diamantes / Pedras Preciosas"
+                                    data-hallmark="Certificação GIA / HRD"
+                                    class="sim-metal-btn text-left p-3.5 rounded-xl border border-neutral-800 bg-slateDeep hover:border-neutral-700 transition-all">
+                                    <span class="flex items-center gap-2 font-mono text-xs text-amber-200 mb-1">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-amber-100 inline-block"></span>
+                                        GEMOLOGIA
+                                    </span>
+                                    <span class="block font-medium text-pearl text-sm">Com Diamantes / Pedras
+                                        Preciosas</span>
+                                    <span class="block text-[11px] text-neutral-400 mt-0.5">Cravação microscópica</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="border-t border-neutral-800/80"></div>
+
+                        <!-- STEP 3: Prazos / Detalhes -->
+                        <div>
+                            <label for="sim-notes"
+                                class="font-serif text-xl sm:text-2xl text-pearl flex items-center gap-2.5 mb-3">
+                                <span
+                                    class="font-mono text-xs px-2.5 py-1 rounded bg-gold/10 text-gold border border-gold/30">PASSO
+                                    03</span>
+                                <span>Prazos Ideais ou Detalhes da Peça <span
+                                        class="text-sm font-sans text-neutral-400 font-normal">(Opcional)</span></span>
+                            </label>
+                            <textarea id="sim-notes" rows="3"
+                                placeholder="Ex: Temos casamento marcado para Setembro; pretendemos acabamento escovado mate ou pretendemos reutilizar o ouro de uma joia antiga da família..."
+                                class="w-full rounded-xl bg-slateDeep border border-neutral-800 focus:border-gold focus:outline-none p-4 text-sm text-pearl placeholder-neutral-500 transition-colors"></textarea>
+                        </div>
+
+                    </div>
+
+                    <!-- Dynamic Summary Panel (4 cols) -->
+                    <div
+                        class="lg:col-span-4 bg-slateDeep p-6 sm:p-8 rounded-xl border border-amber-900/40 relative lg:sticky lg:top-28">
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-neutral-800">
+                            <div>
+                                <span class="font-mono text-[11px] uppercase tracking-widest text-gold block">Ficha
+                                    Técnica Preliminar</span>
+                                <h3 class="font-serif text-2xl text-pearl">Resumo do Pedido</h3>
+                            </div>
+                            <i data-lucide="file-check-2" class="w-6 h-6 text-gold"></i>
+                        </div>
+
+                        <dl class="space-y-4 text-sm mb-6">
+                            <div class="p-3.5 rounded-lg bg-ebony border border-neutral-800/90">
+                                <dt class="font-mono text-[11px] uppercase text-neutral-400 mb-1">01 · Serviço
+                                    Selecionado</dt>
+                                <dd id="summary-service" class="font-medium text-pearl text-base">Alianças de Noivado /
+                                    Casamento</dd>
+                                <dd id="summary-spec" class="font-mono text-xs text-gold-muted mt-1">Sessão de medidas +
+                                    Gravação laser incluída</dd>
+                            </div>
+
+                            <div class="p-3.5 rounded-lg bg-ebony border border-neutral-800/90">
+                                <dt class="font-mono text-[11px] uppercase text-neutral-400 mb-1">02 · Metal &amp;
+                                    Especificação</dt>
+                                <dd id="summary-metal" class="font-medium text-pearl text-base">Ouro Amarelo 19.2k</dd>
+                                <dd id="summary-hallmark" class="font-mono text-xs text-gold-muted mt-1">Contrastaria
+                                    800‰</dd>
+                            </div>
+
+                            <div
+                                class="p-3.5 rounded-lg bg-ebony border border-amber-900/30 flex items-center justify-between">
+                                <div>
+                                    <dt class="font-mono text-[11px] uppercase text-neutral-400">Estimativa de Prazo em
+                                        Bancada</dt>
+                                    <dd id="summary-days"
+                                        class="font-mono text-sm sm:text-base text-gold font-medium mt-0.5">Entrega em
+                                        10 a 15 dias úteis</dd>
+                                </div>
+                                <i data-lucide="clock" class="w-5 h-5 text-gold-muted shrink-0"></i>
+                            </div>
+                        </dl>
+
+                        <a id="sim-whatsapp-btn" href="https://wa.me/351967418499" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-full py-4 px-5 rounded-xl bg-gold hover:bg-[#e0bb3e] text-obsidian font-medium text-sm tracking-wide flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-gold/10">
+                            <span>Enviar Pedido de Cotação via WhatsApp</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+
+                        <p class="text-[12px] text-neutral-400 text-center mt-4 leading-relaxed">
+                            Sem compromisso. Será atendido diretamente pelo ourives responsável para avaliação ou
+                            agendamento.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. BENTO GRID DE SERVIÇOS PRINCIPAIS -->
+        <section id="servicos" class="py-20 lg:py-28 border-b border-neutral-800/80 scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="font-mono text-xs uppercase tracking-[0.2em] text-gold block mb-3">Mestria &amp;
+                            Rigor</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl text-pearl font-normal tracking-tight">
+                            Serviços de Alta Ourivesaria
+                        </h2>
+                    </div>
+                    <p class="text-neutral-400 text-sm sm:text-base max-w-md font-light">
+                        Combinamos técnicas seculares de forja e filigrana com tecnologia de cravação microscópica e
+                        gravação laser no nosso próprio atelier.
+                    </p>
+                </div>
+
+                <!-- Bento Grid (12 Cols Desktop) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                    <!-- Card 1: Destaque Grande (7 cols, 2 rows height equivalent) -->
+                    <article
+                        class="lg:col-span-7 lg:row-span-2 rounded-xl bg-ebony border border-amber-900/30 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-64 sm:h-80 overflow-hidden">
+                            <img src="images/anel-solitario-alianca-ouro.jpg"
+                                alt="Alianças de noivado e casamento e anel solitário na Ourivesaria Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-95" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-ebony via-ebony/30 to-transparent"></div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="font-mono text-xs px-3 py-1 rounded-full bg-obsidian/80 backdrop-blur-md text-gold border border-gold/30">
+                                    ATENDIMENTO PERSONALIZADO
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-serif text-2xl sm:text-3xl text-pearl mb-3">
+                                    Alianças de Noivado, Casamento &amp; Solitários
+                                </h3>
+                                <p class="text-neutral-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                                    Acompanhamento dedicado na nossa loja em Algueirão - Mem Martins para escolha de perfil anatómico, largura, textura e quilatagem. Inclui certificação oficial e <strong
+                                        class="text-pearl font-medium">gravação personalizada</strong> da vossa data ou dedicatória.
+                                </p>
+                            </div>
+
+                            <div
+                                class="pt-5 border-t border-neutral-800 flex flex-wrap items-center justify-between gap-4">
+                                <span class="font-mono text-xs text-gold-muted">✦ Ouro 19.2k · Bicolor · Prata de Lei 925‰</span>
+                                <a href="#simulador"
+                                    class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-gold hover:underline">
+                                    <span>Configurar Alianças</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: A Nossa Loja em Mem Martins (5 cols) -->
+                    <article
+                        class="lg:col-span-5 rounded-xl bg-ebony border border-neutral-800 hover:border-amber-900/40 overflow-hidden transition-colors flex flex-col justify-between group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="images/loja-interior-valliarte.jpg"
+                                alt="Interior da loja Ourivesaria Valliarte Jóias e Decoração em Algueirão - Mem Martins" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-ebony via-ebony/20 to-transparent"></div>
+                            <span class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-gold/30">
+                                A Nossa Loja · Mem Martins
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">
+                                    Ourivesaria, Relojoaria &amp; Decoração
+                                </h3>
+                                <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+                                    Situada na Rua Manuel Guimarães (Loja B) no Algueirão, a Valliarte conjuga alta ourivesaria, restauro de joias e assistência técnica com marcas de referência como <strong class="text-pearl font-normal">TI SENTO Milano, Nomination Italy, Cauny, TOUS e MelanO</strong>.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-4 border-t border-neutral-800/80 flex items-center justify-between font-mono text-xs text-neutral-400">
+                                <span>Rua Manuel Guimarães, Nº 1B</span>
+                                <span class="text-gold">Seg–Sex 10h–19h30</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 & 4 Sub-grid (5 cols total) -->
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                        <!-- Card 3: Peças de Autor -->
+                        <article
+                            class="rounded-xl bg-ebony border border-neutral-800 hover:border-amber-900/40 p-6 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold-muted mb-4">
+                                    <i data-lucide="award" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-pearl mb-2">
+                                    Peças de Autor em Ouro Português 19.2k
+                                </h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed">
+                                    Trabalho artesanal do Minho a Lisboa com punção da Contrastaria da INCM, honrando a
+                                    filigrana e o design contemporâneo.
+                                </p>
+                            </div>
+                            <span class="font-mono text-[11px] text-gold mt-5 block">Toque 800‰ Garantido</span>
+                        </article>
+
+                        <!-- Card 4: Avaliação Profissional -->
+                        <article
+                            class="rounded-xl bg-ebony border border-neutral-800 hover:border-amber-900/40 p-6 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold-muted mb-4">
+                                    <i data-lucide="scale" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="font-serif text-xl text-pearl mb-2">
+                                    Avaliação Profissional de Metais Preciosos
+                                </h3>
+                                <p class="text-neutral-400 text-xs leading-relaxed">
+                                    Peritagem rigorosa de heranças, partilhas de família, moedas e barras com balanças
+                                    homologadas ou reconversão em joias novas.
+                                </p>
+                            </div>
+                            <span class="font-mono text-[11px] text-gold mt-5 block">Sigilo &amp; Rigor Técnico</span>
+                        </article>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. GALERIA DE PEÇAS & COLEÇÃO COM FILTROS INSTANTÂNEOS -->
+        <section id="colecao" class="py-20 lg:py-28 border-b border-neutral-800/80 scroll-mt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+                    <div>
+                        <span class="font-mono text-xs uppercase tracking-[0.2em] text-gold block mb-3">Arquivo &amp;
+                            Curadoria</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl text-pearl font-normal tracking-tight">
+                            Coleção &amp; Obras de Bancada
+                        </h2>
+                    </div>
+
+                    <!-- Instant Filter Buttons (Native Scroll Snap on Mobile) -->
+                    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 lg:pb-0 snap-x snap-mandatory"
+                        role="tablist" aria-label="Filtros da Galeria">
+                        <button type="button" data-filter="all"
+                            class="gallery-filter-btn snap-start shrink-0 px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider bg-gold text-obsidian font-medium border border-gold transition-all">
+                            Todas
+                        </button>
+                        <button type="button" data-filter="aliancas"
+                            class="gallery-filter-btn snap-start shrink-0 px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider bg-ebony text-neutral-300 hover:text-pearl border border-neutral-800 transition-all">
+                            Alianças
+                        </button>
+                        <button type="button" data-filter="noivado"
+                            class="gallery-filter-btn snap-start shrink-0 px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider bg-ebony text-neutral-300 hover:text-pearl border border-neutral-800 transition-all">
+                            Anéis de Noivado
+                        </button>
+                        <button type="button" data-filter="colares"
+                            class="gallery-filter-btn snap-start shrink-0 px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider bg-ebony text-neutral-300 hover:text-pearl border border-neutral-800 transition-all">
+                            Filigrana &amp; Colares
+                        </button>
+                        <button type="button" data-filter="restauro"
+                            class="gallery-filter-btn snap-start shrink-0 px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider bg-ebony text-neutral-300 hover:text-pearl border border-neutral-800 transition-all">
+                            Relojoaria &amp; Marcas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Scroll Hint -->
+                <p class="text-xs font-mono text-neutral-500 mb-4 sm:hidden">← Deslize horizontalmente ou filtre por
+                    categoria →</p>
+
+                <!-- Gallery Container: Scroll Snap Carousel on Mobile, 3-Col Grid on Tablet/Desktop -->
+                <div id="gallery-grid"
+                    class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto sm:overflow-visible snap-x snap-mandatory no-scrollbar pb-4 sm:pb-0">
+
+                    <!-- Item 1: Anel de Noivado Bicolor -->
+                    <article data-category="noivado"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/anel-noivado-bicolor.jpg"
+                                alt="Solitário de Noivado Bicolor em Ouro na Ourivesaria Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Anéis de Noivado
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Ouro Bicolor 19.2k · Cravação de 4 Garras</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Solitário Bicolor "Lumina"</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Aro duplo em ouro amarelo e ouro branco com pedra central de lapidação brilhante, fotografado na nossa montra em Mem Martins.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20o%20Solit%C3%A1rio%20Bicolor%20Lumina."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 2: Aliança Cravada em Ouro -->
+                    <article data-category="aliancas"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/alianca-cravada-ouro.jpg"
+                                alt="Aliança Cravada em Ouro na Ourivesaria Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Alianças
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Ouro Amarelo 19.2k · Cravação Contínua</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Aliança "Eternidade Dourada"</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Aliança meia-volta cravada em ouro português com perfil interior anatómico e acabamento polido de alto brilho.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20a%20Alian%C3%A7a%20Eternidade%20Dourada."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 3: Filigrana Coração de Viana -->
+                    <article data-category="colares"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/brincos-filigrana-coracao.jpg"
+                                alt="Brincos Coração de Viana em Filigrana Portuguesa na Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Filigrana Portuguesa
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Prata de Lei 925 Dourada &amp; Ouro · Filigrana Manual</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Brincos Coração de Viana</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Tradição secular portuguesa trabalhada em filigrana artesanal certificada, disponível na nossa loja em Algueirão - Mem Martins.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20os%20Brincos%20Cora%C3%A7%C3%A3o%20de%20Viana%20em%20Filigrana."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 4: Brincos à Rainha em Filigrana -->
+                    <article data-category="colares"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/brincos-filigrana-rainha.jpg"
+                                alt="Brincos Princesa e Rainha em Filigrana na Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Filigrana Portuguesa
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Prata 925‰ Dourada · Ourivesaria Tradicional</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Brincos à Rainha &amp; Princesa</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Peça icónica da ourivesaria tradicional portuguesa com rendilhado minucioso em filigrana e acabamento dourado.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20os%20Brincos%20%C3%A0%20Rainha%20em%20Filigrana."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 5: Anel Roseta Safira -->
+                    <article data-category="noivado"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/anel-safira-diamantes.jpg"
+                                alt="Anel Roseta com Safira Azul na Ourivesaria Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Anéis de Noivado
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Ouro Português · Safira Azul &amp; Halo Brilhante</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Anel Roseta "Duquesa de Sintra"</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Inspiração real com pedra azul de talhe oval rodeada por coroa luminosa de pedras brancas cravadas em garras.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20o%20Anel%20Roseta%20Duquesa%20de%20Sintra."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 6: TI SENTO Milano -->
+                    <article data-category="restauro"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/anel-tisento-madreperola.jpg"
+                                alt="Anel TI SENTO Milano em Prata de Lei 925 e Ouro 18k na Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-emerald-400 border border-emerald-900/50">
+                                TI SENTO Milano
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Prata de Lei 925 · Banho de Ouro 18k · Cravação Manual</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Coleção TI SENTO Milano</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    As nossas joias de eleição em Prata de Lei 925 com banho de ouro 18k e pedras cravadas manualmente segundo os mais altos padrões.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20os%20an%C3%A9is%20TI%20SENTO%20Milano."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 7: Colar Pérolas & Medalha -->
+                    <article data-category="colares"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/colar-perolas-mae.jpg"
+                                alt="Colar com Pérolas e Medalha Dedicatória na Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Filigrana &amp; Colares
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Prata de Lei 925 · Pérolas &amp; Gravação</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Colar &amp; Medalha "Amor de Mãe"</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Fio delicado intercalado com pérolas e medalha comemorativa com coração dourado cravado, perfeito para datas especiais.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20os%20colares%20e%20medalhas."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 8: Anel Entrelaçado Bicolor -->
+                    <article data-category="aliancas"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/anel-tisento-entrelacado.jpg"
+                                alt="Anel Entrelaçado Bicolor TI SENTO na Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-gold border border-neutral-800">
+                                Alianças &amp; Anéis
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Prata 925‰ · Ouro 18k &amp; Pavé</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Anel Entrelaçado Bicolor</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Design contemporâneo de elos cruzados combinando o brilho do banho de ouro amarelo com pavé de zircónias cravadas à mão.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20o%20Anel%20Entrela%C3%A7ado%20Bicolor."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Item 9: Relojoaria Cauny & Nomination -->
+                    <article data-category="restauro"
+                        class="gallery-item snap-center shrink-0 w-[85vw] sm:w-auto rounded-xl bg-ebony border border-neutral-800 overflow-hidden flex flex-col justify-between group">
+                        <div class="relative h-72 overflow-hidden bg-slateDeep">
+                            <img src="images/relogio-cauny-royal.jpg"
+                                alt="Relógio Cauny Royal Green na Ourivesaria Valliarte" loading="lazy"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                            <span
+                                class="absolute top-3 left-3 font-mono text-[11px] px-2.5 py-1 rounded bg-obsidian/85 text-emerald-400 border border-emerald-900/50">
+                                Relojoaria Oficial
+                            </span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-gold-muted block mb-1">Agente Oficial · Cauny · TOUS · Nomination Italy</span>
+                                <h3 class="font-serif text-2xl text-pearl mb-2">Relógios Cauny &amp; Pulseiras Nomination</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-5">
+                                    Símbolo de sofisticação e estilo intemporal. Descubra na nossa loja as coleções Cauny, TOUS e links Composable da Nomination.
+                                </p>
+                            </div>
+                            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20saber%20mais%20sobre%20a%20cole%C3%A7%C3%A3o%20de%20rel%C3%B3gios%20Cauny%20e%20Nomination."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-slateDeep hover:bg-neutral-800 border border-neutral-800 text-xs text-pearl transition-colors">
+                                <span>Saber mais no WhatsApp</span>
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FAQ (PERGUNTAS FREQUENTES SEM JS PESADO) -->
+        <section id="faq" class="py-20 lg:py-28 border-b border-neutral-800/80 scroll-mt-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-12">
+                    <span class="font-mono text-xs uppercase tracking-[0.2em] text-gold block mb-3">Esclarecimentos
+                        &amp; Confiança</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-pearl font-normal tracking-tight">
+                        Perguntas Frequentes
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+
+                    <!-- Question 1 -->
+                    <details
+                        class="group rounded-xl bg-ebony border border-neutral-800 open:border-amber-900/40 transition-colors"
+                        open>
+                        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer select-none">
+                            <h3 class="font-serif text-xl sm:text-2xl text-pearl font-normal">
+                                Como funciona o processo de criação de uma joia personalizada?
+                            </h3>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold group-open:rotate-45 transition-transform shrink-0">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </summary>
+                        <div
+                            class="px-6 pb-6 pt-2 text-neutral-300 text-sm sm:text-base font-light leading-relaxed border-t border-neutral-800/60">
+                            O processo inicia-se com uma conversa no nosso atelier ou via videochamada, onde ouvimos a
+                            sua história e referências. De seguida, elaboramos o esboço técnico e modelação 3D à escala
+                            real para sua aprovação. Também podemos fundir e reutilizar ouro de peças antigas da sua
+                            família, reduzindo substancialmente o custo final da matéria-prima mantendo todo o valor
+                            sentimental.
+                        </div>
+                    </details>
+
+                    <!-- Question 2 -->
+                    <details
+                        class="group rounded-xl bg-ebony border border-neutral-800 open:border-amber-900/40 transition-colors">
+                        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer select-none">
+                            <h3 class="font-serif text-xl sm:text-2xl text-pearl font-normal">
+                                O vosso ouro tem certificação da Contrastaria Portuguesa?
+                            </h3>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold group-open:rotate-45 transition-transform shrink-0">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </summary>
+                        <div
+                            class="px-6 pb-6 pt-2 text-neutral-300 text-sm sm:text-base font-light leading-relaxed border-t border-neutral-800/60">
+                            Sim, integralmente. Todas as peças produzidas e comercializadas pela Ourivesaria ValliArte
+                            em Ouro Português de 19.2 quilates (toque legal de <span
+                                class="font-mono text-xs text-gold">800‰</span>) e Prata de Lei (<span
+                                class="font-mono text-xs text-gold">925‰</span>) ostentam o punção oficial das
+                            Contrastarias da Imprensa Nacional-Casa da Moeda (INCM), garantindo autenticidade vitalícia.
+                        </div>
+                    </details>
+
+                    <!-- Question 3 -->
+                    <details
+                        class="group rounded-xl bg-ebony border border-neutral-800 open:border-amber-900/40 transition-colors">
+                        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer select-none">
+                            <h3 class="font-serif text-xl sm:text-2xl text-pearl font-normal">
+                                Quanto tempo demora o ajuste de medida de um anel ou gravação?
+                            </h3>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold group-open:rotate-45 transition-transform shrink-0">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </summary>
+                        <div
+                            class="px-6 pb-6 pt-2 text-neutral-300 text-sm sm:text-base font-light leading-relaxed border-t border-neutral-800/60">
+                            Como dispomos de bancada de ourives própria nas nossas instalações, gravações personalizadas
+                            e ajustes simples de medida são realizados entre <span
+                                class="font-mono text-xs text-gold">24 a 72 horas úteis</span>. Em casos urgentes
+                            previamente agendados, conseguimos realizar o serviço no próprio dia.
+                        </div>
+                    </details>
+
+                    <!-- Question 4 -->
+                    <details
+                        class="group rounded-xl bg-ebony border border-neutral-800 open:border-amber-900/40 transition-colors">
+                        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer select-none">
+                            <h3 class="font-serif text-xl sm:text-2xl text-pearl font-normal">
+                                É necessário agendar hora para escolher alianças de casamento?
+                            </h3>
+                            <span
+                                class="w-8 h-8 rounded-lg bg-slateDeep border border-neutral-800 flex items-center justify-center text-gold group-open:rotate-45 transition-transform shrink-0">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                            </span>
+                        </summary>
+                        <div
+                            class="px-6 pb-6 pt-2 text-neutral-300 text-sm sm:text-base font-light leading-relaxed border-t border-neutral-800/60">
+                            A nossa loja está aberta ao público durante o horário normal, mas recomendamos vivamente o
+                            agendamento de uma consulta privada gratuita para noivos. Assim, garantimos tranquilidade
+                            absoluta durante 60 minutos com o especialista para testar diferentes larguras, acabamentos
+                            e tirar medidas anatómicas exatas.
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. RODAPÉ INSTITUCIONAL & CRÉDITOS -->
+    <footer id="contactos" class="relative z-10 bg-slateDeep pt-16 pb-12 border-t border-neutral-800 scroll-mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Destaque Visual da Loja em Mem Martins -->
+            <div class="mb-12 rounded-2xl bg-ebony border border-neutral-800 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="font-mono text-xs uppercase tracking-[0.2em] text-gold">Visite a Nossa Loja em Mem Martins</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl text-pearl font-normal">
+                        Valliarte — Jóias e Decoração em Algueirão - Mem Martins
+                    </h3>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed">
+                        Recebemo-lo na nossa ourivesaria na <strong class="text-pearl font-normal">Rua Manuel Guimarães, n.º 1, Loja B</strong> em Algueirão - Mem Martins (Sintra). Venha experimentar as nossas coleções de filigrana portuguesa, alianças de casamento, relojoaria, artigos de decoração e batizado, ou confie-nos o restauro das suas joias.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Valliarte+Rua+Manuel+Guimar%C3%A3es+1+Loja+B+2725-680+Mem+Martins"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gold text-obsidian font-semibold text-xs hover:bg-[#e0bb3e] transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span>Ver Direções no Google Maps</span>
+                        </a>
+                        <a href="https://www.facebook.com/p/Valliarte-J%C3%B3ias-e-decora%C3%A7%C3%A3o-100063790548449/?locale=pt_PT"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slateDeep text-pearl border border-neutral-700 hover:border-gold/60 font-medium text-xs transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4 text-gold"></i>
+                            <span>Página Oficial no Facebook</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+                    <div class="rounded-xl overflow-hidden border border-neutral-800 aspect-[4/3] bg-slateDeep">
+                        <img src="images/loja-interior-valliarte.jpg"
+                            alt="Interior da Ourivesaria Valliarte em Mem Martins"
+                            loading="lazy"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-neutral-800 aspect-[4/3] bg-slateDeep">
+                        <img src="images/montra-chrysalis-valliarte.jpg"
+                            alt="Montra e expositores da Valliarte Jóias e Decoração"
+                            loading="lazy"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-neutral-800/80">
+
+                <!-- Col 1: Brand & Seal (4 cols) -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-3xl tracking-[0.22em] text-pearl font-semibold">VALLIARTE</span>
+                        <span class="text-[11px] uppercase tracking-[0.18em] text-gold-muted">Jóias &amp; Decoração ·
+                            Ourivesaria</span>
+                    </div>
+                    <p class="text-neutral-400 text-sm font-light leading-relaxed pr-4">
+                        Ourivesaria tradicional e joalharia em Algueirão - Mem Martins. Especialistas em ouro 19.2k,
+                        prata certificada, filigrana portuguesa, relojoaria, decoração e oficina de reparações.
+                    </p>
+                    <div class="inline-flex items-center gap-3 p-3 rounded-xl bg-ebony border border-neutral-800">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-gold shrink-0"></i>
+                        <div class="text-xs">
+                            <span class="block text-pearl font-medium">Operador Licenciado pelo Estado</span>
+                            <span class="font-mono text-[11px] text-neutral-400">Contrastaria Portuguesa INCM · Ouro
+                                800‰</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Localização & Contactos (3 cols) -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-mono text-xs uppercase tracking-widest text-gold">Morada &amp; Contactos</h4>
+                    <ul class="space-y-2.5 text-sm text-neutral-300 font-light">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-gold-muted shrink-0 mt-1"></i>
+                            <span>Rua Manuel Guimarães, n.º 1, Loja B<br />2725-680 Algueirão - Mem Martins, Sintra</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-gold-muted shrink-0"></i>
+                            <a href="tel:+351218008299" class="hover:text-gold transition-colors font-mono text-xs">+351
+                                218 008 299 (Loja)</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-gold-muted shrink-0"></i>
+                            <a href="https://wa.me/351967418499" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-gold transition-colors font-mono text-xs">+351 967 418 499
+                                (Telemóvel / WhatsApp)</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="mail" class="w-4 h-4 text-gold-muted shrink-0"></i>
+                            <a href="mailto:valliarte@gmail.com"
+                                class="hover:text-gold transition-colors">valliarte@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i data-lucide="facebook" class="w-4 h-4 text-gold-muted shrink-0"></i>
+                            <a href="https://www.facebook.com/p/Valliarte-J%C3%B3ias-e-decora%C3%A7%C3%A3o-100063790548449/?locale=pt_PT"
+                                target="_blank" rel="noopener noreferrer"
+                                class="hover:text-gold transition-colors text-xs">facebook.com/Valliarte</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Horário de Funcionamento (3 cols) -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-mono text-xs uppercase tracking-widest text-gold">Horário de Funcionamento</h4>
+                    <ul class="space-y-2 text-sm text-neutral-300 font-light">
+                        <li class="flex justify-between border-b border-neutral-800/60 pb-1.5">
+                            <span>Segunda a Sexta</span>
+                            <span class="font-mono text-xs text-pearl">10h00 – 19h30</span>
+                        </li>
+                        <li class="flex justify-between border-b border-neutral-800/60 pb-1.5">
+                            <span>Sábado</span>
+                            <span class="font-mono text-xs text-pearl">10h00 – 13h00</span>
+                        </li>
+                        <li class="flex justify-between pb-1">
+                            <span>Domingo</span>
+                            <span class="font-mono text-xs text-gold-muted">Encerrado</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Legal & Regulamentação (2 cols) -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-mono text-xs uppercase tracking-widest text-gold">Institucional</h4>
+                    <ul class="space-y-2 text-xs text-neutral-400">
+                        <li>
+                            <a href="https://www.contrastaria.pt" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-pearl flex items-center gap-1.5 transition-colors">
+                                <span>Quadro de Marcas INCM</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer"
+                                class="hover:text-pearl flex items-center gap-1.5 transition-colors">
+                                <span>Livro de Reclamações</span>
+                                <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </li>
+                        <li><a href="#simulador" class="hover:text-pearl transition-colors">Cotação Diária do Ouro</a>
+                        </li>
+                        <li><a href="#faq" class="hover:text-pearl transition-colors">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Agency Credit -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+                <p>© <span id="current-year">2026</span> Valliarte — Jóias e Decoração. Todos os direitos reservados.</p>
+                <p class="text-neutral-400">
+                    Website e Experiência Digital desenvolvidos por
+                    <a href="https://figasstudio.com" target="_blank" rel="noopener noreferrer"
+                        class="text-gold-muted hover:text-gold underline underline-offset-4 transition-colors font-medium">
+                        Figas Studio (figasstudio.com)
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- 7. MOBILE STICKY BOTTOM BAR (EXCLUSIVO PARA ECRÃS MÓVEIS) -->
+    <div
+        class="fixed bottom-0 left-0 right-0 md:hidden z-50 bg-[#121316]/95 backdrop-blur-md border-t border-neutral-800 px-3 py-2.5">
+        <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+            <a href="tel:+351218008299"
+                class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-ebony active:bg-neutral-800 text-pearl border border-neutral-700 font-medium text-xs tracking-wide">
+                <i data-lucide="phone-call" class="w-4 h-4 text-gold"></i>
+                <span>Ligar para a Loja</span>
+            </a>
+            <a href="https://wa.me/351967418499?text=Ol%C3%A1%20Valliarte.%20Gostaria%20de%20falar%20com%20a%20loja."
+                target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gold active:bg-[#e0bb3e] text-obsidian font-semibold text-xs tracking-wide shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Direto</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- PURE VANILLA JAVASCRIPT (ZERO BLOAT) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Initialize Lucide Icons
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            // 2. Dynamic Footer Year
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            // 3. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // 4. Interactive Business Module: Simulador de Encomenda & Restauro
+            const state = {
+                service: 'Alianças de Noivado / Casamento',
+                days: '10 a 15 dias úteis',
+                spec: 'Sessão de medidas + Gravação laser incluída',
+                metal: 'Ouro Amarelo 19.2k',
+                hallmark: 'Contrastaria 800‰',
+                notes: ''
+            };
+
+            const serviceButtons = document.querySelectorAll('.sim-service-btn');
+            const metalButtons = document.querySelectorAll('.sim-metal-btn');
+            const notesInput = document.getElementById('sim-notes');
+
+            const summaryService = document.getElementById('summary-service');
+            const summarySpec = document.getElementById('summary-spec');
+            const summaryMetal = document.getElementById('summary-metal');
+            const summaryHallmark = document.getElementById('summary-hallmark');
+            const summaryDays = document.getElementById('summary-days');
+            const whatsappBtn = document.getElementById('sim-whatsapp-btn');
+
+            const WHATSAPP_NUMBER = '351967418499';
+
+            function updateSimulatorUI() {
+                // Update Text Summary
+                summaryService.textContent = state.service;
+                summarySpec.textContent = state.spec;
+                summaryMetal.textContent = state.metal;
+                summaryHallmark.textContent = state.hallmark;
+                summaryDays.textContent = `Entrega em ${state.days}`;
+
+                // Build Pre-formatted WhatsApp Message
+                const cleanNotes = state.notes.trim() ? state.notes.trim() : 'Sem notas adicionais';
+                const message = [
+                    'Olá Ourivesaria ValliArte! ✦',
+                    'Gostaria de solicitar uma cotação/informação através do Simulador do Atelier:',
+                    '',
+                    `• *Serviço:* ${state.service}`,
+                    `• *Material/Metal:* ${state.metal} (${state.hallmark})`,
+                    `• *Prazo Estimado:* ${state.days}`,
+                    `• *Detalhes/Notas:* ${cleanNotes}`,
+                    '',
+                    'Aguardo a vossa disponibilidade. Obrigado!'
+                ].join('\n');
+
+                whatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            }
+
+            serviceButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    serviceButtons.forEach(b => {
+                        b.classList.remove('border-gold', 'bg-gold/10');
+                        b.classList.add('border-neutral-800', 'bg-slateDeep');
+                    });
+                    btn.classList.remove('border-neutral-800', 'bg-slateDeep');
+                    btn.classList.add('border-gold', 'bg-gold/10');
+
+                    state.service = btn.getAttribute('data-service');
+                    state.days = btn.getAttribute('data-days');
+                    state.spec = btn.getAttribute('data-spec');
+                    updateSimulatorUI();
+                });
+            });
+
+            metalButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    metalButtons.forEach(b => {
+                        b.classList.remove('border-gold', 'bg-gold/10');
+                        b.classList.add('border-neutral-800', 'bg-slateDeep');
+                    });
+                    btn.classList.remove('border-neutral-800', 'bg-slateDeep');
+                    btn.classList.add('border-gold', 'bg-gold/10');
+
+                    state.metal = btn.getAttribute('data-metal');
+                    state.hallmark = btn.getAttribute('data-hallmark');
+                    updateSimulatorUI();
+                });
+            });
+
+            if (notesInput) {
+                notesInput.addEventListener('input', (e) => {
+                    state.notes = e.target.value;
+                    updateSimulatorUI();
+                });
+            }
+
+            // Initial call to populate WhatsApp link
+            updateSimulatorUI();
+
+            // 5. Instant Collection Gallery Filtering
+            const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Update Active Button Style
+                    filterButtons.forEach(b => {
+                        b.classList.remove('bg-gold', 'text-obsidian', 'font-medium', 'border-gold');
+                        b.classList.add('bg-ebony', 'text-neutral-300', 'border-neutral-800');
+                    });
+                    btn.classList.remove('bg-ebony', 'text-neutral-300', 'border-neutral-800');
+                    btn.classList.add('bg-gold', 'text-obsidian', 'font-medium', 'border-gold');
+
+                    // Filter Items
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.classList.remove('hidden');
+                            item.classList.add('flex');
+                        } else {
+                            item.classList.remove('flex');
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
